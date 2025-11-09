@@ -7,6 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import kg.alatoo.dummyshop.authentication.ui.AuthenticationScreen
 
 @Composable
 fun AppNavigationGraph(navController: NavHostController, modifier: Modifier = Modifier) {
@@ -26,7 +27,7 @@ fun AppNavigationGraph(navController: NavHostController, modifier: Modifier = Mo
 //            CartsDetailsScreen(navController = navController)
         }
         composable(NavScreens.Authentication.route) {
-//            AuthenticationScreen(navController = navController)
+            AuthenticationScreen(navController = navController)
         }
         composable(
             NavScreens.ProductDetails.route,
