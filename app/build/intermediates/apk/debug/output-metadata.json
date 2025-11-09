@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.dummyshop",
+  "applicationId": "kg.alatoo.dummyshop",
   "variantName": "debug",
   "elements": [
     {
