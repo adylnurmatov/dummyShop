@@ -8,6 +8,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import kg.alatoo.dummyshop.authentication.ui.AuthenticationScreen
+import kg.alatoo.dummyshop.product.ui.ProductsScreen
+import kg.alatoo.dummyshop.product.ui.productsDetails.ProductDetailsScreen
 import kg.alatoo.dummyshop.user.ui.UserDetailsScreen
 
 @Composable
@@ -19,7 +21,7 @@ fun AppNavigationGraph(navController: NavHostController, modifier: Modifier = Mo
     ) {
 
         composable(NavScreens.Products.route) {
-//            ProductsScreen(navController = navController)
+            ProductsScreen(navController = navController)
         }
         composable(NavScreens.UserDetails.route) {
             UserDetailsScreen(navController = navController)
@@ -35,7 +37,7 @@ fun AppNavigationGraph(navController: NavHostController, modifier: Modifier = Mo
             arguments = listOf(navArgument("productId") { type = NavType.LongType })
         ) {backStackEntry->
             val productId = backStackEntry.arguments?.getLong("productId") ?: 1L
-//            ProductDetailsScreen(productId = productId, navController = navController)
+            ProductDetailsScreen(productId = productId, navController = navController)
         }
     }
 }
